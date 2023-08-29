@@ -1,0 +1,122 @@
+:root {
+    --main-bg-color: #27374D;
+    --main-txt-color: #DDE6ED;
+}
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* navbar */
+.container-navbar {
+    background-color: var(--main-bg-color);
+    width: 100%;
+    height: 10vh;
+
+}
+
+.ul-navbar {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 15px;
+}
+
+.li-navbar {
+    list-style-type: none;
+    color: var(--main-txt-color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+.li-navbar:hover {
+    background-color: #33BBC5;
+    transition: .5s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 9px;
+}
+
+.a-navbar {
+    color: var(--main-txt-color);
+    text-decoration: none;
+}
+/* navbar end */
+
+/* content */
+.gallery {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    height: 80vh;
+}
+
+.card {
+    position: relative;
+    top: 100px;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    transition: 1000ms all;
+    transform-origin: center left;
+    outline: 1px solid rgba(rgb(8, 8, 8) alpha);
+    overflow: hidden;
+}
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.card:hover figcaption {
+    font-size: 20px;
+    position: absolute;
+    height: 70px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        to top
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba( 0, 0, 0, 0)100%
+    );
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    left: 0px;
+    bottom: 0px;
+    padding-left: 10px;
+    padding: 20px;
+}
+
+.card:hover ~ .card {
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(50px);
+}
+
+/* content end */
+
+/* footer */
+.container-footer {
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.h1-footer {
+    color: var(--main-txt-color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
