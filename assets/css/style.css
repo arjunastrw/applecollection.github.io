@@ -51,89 +51,6 @@ nav ul a:hover {
 
 /* navbar end */
 
-
-/* content */
-.gallery {
-    display:flex;
-    gap: 30px;
-    justify-content: center;
-    height: 80vh;
-    background-color: rgb(0, 0, 0);
-}
-
-.gallery a {
-    color: black;
-}
-
-.card {
-    position: relative;
-    top: 100px;
-    width: 225px;
-    height: 300px;
-    background-color: black;
-    border-radius: 10px;
-    transition: 1000ms all;
-    transform-origin: center left;
-    outline: 1px solid rgba(rgb(7, 5, 5) alpha);
-    overflow: hidden;
-}
-
-.card img {
-    max-height: 250px;
-    max-width: 225px;
-    object-fit: fill;
-}
-
-.card:hover {
-    cursor: pointer;
-    transform: scale(1.15);
-}
-
-.card:hover figcaption {
-    font-size: 20px;
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(
-        to top
-        rgba(0, 0, 0, 0.9) 0%,
-        rgba( 0, 0, 0, 0)100%
-    );
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    left: 0px;
-    bottom: 0px;
-    padding-left: 10px;
-    padding: 20px;
-}
-
-.card:hover ~ .card {
-    font-weight: bold;
-    cursor: pointer;
-    transform: translateX(15px);
-}
-/* content end */
-
-
-/* footer */
-.container-footer {
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-}
-
-.h1-footer {
-    color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-/* footer end */
-
-
 /* Hamburger Menu */
 .menu-toogle {
     display: none;
@@ -183,16 +100,143 @@ nav ul a:hover {
     background-color: white;
     transform: rotate(-45deg) translate(-3px, 6px);
 }
+/* hamburger menu animation end */
+
+
+/* content */
+.gallery {
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 30px;
+    padding: 20px 20px;
+    height: 80vh;
+    background-color: rgb(3, 3, 3);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 285px;
+    width: 300px;
+    margin-top: 100px;
+    /* background-color: rgb(255, 18, 18); */
+    transition: 1000ms all;
+    transform-origin: center center;
+}
+
+.gallery a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    height: 200px;
+    width: 220px;
+    overflow:hidden;
+}
+
+.card img {
+    padding: 0px 50px 50px;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.card:hover figcaption {
+    font-size: 20px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        to top
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba( 0, 0, 0, 0)100%
+    );
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    left: 75px;
+    bottom: 20px;
+}
+
+.card:hover ~ .card {
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(15px);
+}
+/* content end */
+
+
+/* footer */
+.container-footer {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.h1-footer {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+/* footer end */
+
 
 
 /* responsive breakpoint */
 
 /* ukuran tablet */
 @media screen and (max-width: 768px){
+    
     nav ul {
         width: 50%;
 
     }
+
+    .gallery  {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+
+    }
+
+    .gallery a {
+        width: 300px;
+        height: 300px;
+        margin-left: 60px;
+    }
+
+    .gallery img {
+        height: 200px;
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+
+    .card:hover figcaption {
+        font-size: 20px;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+            to top
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba( 0, 0, 0, 0)100%
+        );
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        left: 150px;
+        bottom: 20px;
+    }
+
 }
 
 /* ukuran handphone */
